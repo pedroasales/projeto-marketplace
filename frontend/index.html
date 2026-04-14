@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Frontend funcionando</h1>
+    <button onclick="chamarBackend()">Enviar</button>
+
+    <script>
+    function chamarBackend() {
+        fetch("http://localhost:8080/send")
+            .then(res => res.text())
+         .then(data => {
+            alert(data);
+        })
+        .catch(err => {
+            console.error("ERRO:", err);
+        });
+}
+</script>
+</body>
+</html>
